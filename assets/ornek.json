@@ -1,0 +1,20 @@
+[
+  {
+    "id": 0,
+    "quoteText": "Life isn’t about getting and having, it’s about giving and being.",
+    "quoteAuthor": "Kevin Kruse",
+    "favStatus": false
+  },
+  {
+    "id": 1,
+    "quoteText": "Whatever the mind of man can conceive and believe, it can achieve.",
+    "quoteAuthor": "Napoleon Hill",
+    "favStatus": false
+  },
+  {
+    "id": 2,
+    "quoteText": "Strive not to be a success, but rather to be of value.",
+    "quoteAuthor": "Albert Einstein",
+    "favStatus": false
+  }
+]
