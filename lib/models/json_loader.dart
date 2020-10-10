@@ -78,7 +78,7 @@ Future<File> get _dbFile async {
   // final file = await _dbFile;
   final filePath = await _localPath;
 
-  if (File('$filePath/' + jsonFileName).existsSync()) {
+  if (!File('$filePath/' + jsonFileName).existsSync()) {
     File('$filePath/' + jsonFileName).writeAsStringSync(json.encode(snapshot));
   } else {
     final file = File('$filePath/' + jsonFileName);
@@ -92,7 +92,7 @@ Future<File> get _dbFile async {
   print("dosyaya yazildi.");
 }
 
-Future<List> read(json) async {
+Future<String> read(json) async {
   String text;
   try {
     final Directory directory = await getExternalStorageDirectory();
@@ -103,6 +103,7 @@ Future<List> read(json) async {
     print("Couldn't read file");
   }
   print(text);
+  return text;
 }
 
 readMyCatJson(json) async {
@@ -142,10 +143,11 @@ loadAllJsonFile() async {
   while (i < 5) {
     String jsonString = await rootBundle.loadString('assets/' + jsonFiles[i]);
     final list = json.decode(jsonString);
-
+    List x = list;
+    x.shuffle();
     if (!File('${directory.path}/' + jsonFiles[i]).existsSync()) {
       final File file = File('${directory.path}/' + jsonFiles[i]);
-      file.writeAsStringSync(json.encode(list));
+      file.writeAsStringSync(json.encode(x));
     }
 
     i++;

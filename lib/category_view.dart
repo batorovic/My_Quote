@@ -1,14 +1,9 @@
-import 'dart:async';
-import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:my_quote/constants.dart';
 import 'package:my_quote/models/json_loader.dart';
 import 'package:my_quote/size_config.dart';
 import 'package:my_quote/models/category.dart';
 import 'package:my_quote/my_quote_view.dart';
-import 'package:path_provider/path_provider.dart';
 
 class CategoryView extends StatefulWidget {
   @override
@@ -41,11 +36,14 @@ class _CategoryViewState extends State<CategoryView> {
                   result = [_categoryText, _jsonPath];
                   isChanged = true;
                   setState(() {
+                    ornek.shuffle();
+                    write(ornek, writeJsonName);
                     future1 = readMyCatJson(result[1]);
                   });
                   WidgetsBinding.instance.addPostFrameCallback((_) async {
                     ornek = await jsonYukle(result[1]);
                   });
+
                   final BottomNavigationBar navigationBar =
                       globalKey.currentWidget;
                   navigationBar.onTap(0);

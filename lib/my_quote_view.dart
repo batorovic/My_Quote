@@ -51,9 +51,7 @@ class _MyQuoteViewState extends State<MyQuoteView> {
 
   int bottomIndex = 0;
 
-  String appBartext = 'Random';
-  String _quoteText;
-  String _quoteAuthor;
+  String appBartext = 'RANDOM';
 
   PageController _pageController = new PageController();
 
@@ -68,17 +66,8 @@ class _MyQuoteViewState extends State<MyQuoteView> {
 
   // Future _future;
   Future<String> loadJson() async => await rootBundle.loadString(
-      // "/storage/emulated/0/Android/data/com.example.my_quote/files/naber.json");
+      // "/storage/emulated/0/Android/data/com.example.my_quote/files/random.json");
       "assets/random.json");
-
-  getJsonFromAssets() async {
-    // scrapper = await loadQuotes("scrapper.json");
-
-    ornek = await jsonYukle(
-        "/storage/emulated/0/Android/data/com.example.my_quote/files/naber.json");
-
-    // ornek = await getQuote("assets/ornek.json"));
-  }
 
   batuhan(x) async {
     ornek = await jsonYukle(x);
@@ -88,90 +77,88 @@ class _MyQuoteViewState extends State<MyQuoteView> {
     fav = await jsonYukle(x);
   }
 
-  batuhanBaslangic(x) async {
-    ornek = await loadQuotes(x);
+  batuhanBaslangic(randomJson, favJson) async {
+    ornek = await loadQuotes(randomJson);
+    fav = await jsonYukle(favJson);
   }
 
   @override
   void initState() {
     super.initState();
     checkPermissions();
-    future1 = loadJson();
-    // getJsonFromAssets();
-    createFavoriteFile();
     loadAllJsonFile();
+    createFavoriteFile();
+    future1 = loadJson();
+
     // batuhan(
     //     "/storage/emulated/0/Android/data/com.example.my_quote/files/random.json");
-    batuhanBaslangic("assets/random.json");
-
-    batuhanFav(
+    batuhanBaslangic("assets/random.json",
         "/storage/emulated/0/Android/data/com.example.my_quote/files/favorites.json");
-  }
 
-  // Future<List<dynamic>> get deneme async {
-  //   return await getQuote(
-  //       "/storage/emulated/0/Android/data/com.example.my_quote/files/naber.json");
-  // }
+    // batuhanFav(
+    //     "/storage/emulated/0/Android/data/com.example.my_quote/files/favorites.json");
+  }
 
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
+    return SafeArea(
+      child: Scaffold(
+          key: _scaffoldKey,
+          backgroundColor: cBackGroundColor,
+          // appBar: buildAppBar(),
+          bottomNavigationBar: BottomNavigationBar(
+            key: globalKey,
+            onTap: (value) {
+              setState(() {
+                if (isChanged == true) {
+                  appBartext = result[0];
+                  writeJsonName = appBartext.toLowerCase() + ".json";
+                  print(result[1]);
 
-    return Scaffold(
-        key: _scaffoldKey,
-        backgroundColor: cBackGroundColor,
-        // appBar: buildAppBar(),
-        bottomNavigationBar: BottomNavigationBar(
-          key: globalKey,
-          onTap: (value) {
-            setState(() {
-              if (isChanged == true) {
-                appBartext = result[0];
-                writeJsonName = appBartext.toLowerCase() + ".json";
-                print(result[1]);
+                  // batuhan(result[1]);
 
-                // batuhan(result[1]);
+                  currentPage = 0;
+                  // _pageController.jumpTo(0);
+                  pageIndex = 0;
 
-                currentPage = 0;
-                // _pageController.jumpTo(0);
-                pageIndex = 0;
-
-                isChanged = false;
-                buildFlusbar(result[0] + " selected");
-              }
-              if (bottomIndex != value) {
-                bottomIndex = value;
-                // isChanged = !isChanged;
-              }
-            });
-          },
-          unselectedItemColor: Colors.grey,
-          selectedItemColor: Colors.white,
-          currentIndex: bottomIndex,
-          backgroundColor: Colors.black87,
-          items: [
-            BottomNavigationBarItem(
-              title: Text('Home'),
-              icon: Icon(Icons.home),
-            ),
-            BottomNavigationBarItem(
-                title: Text('Favorites'),
-                icon: bottomIndex == 1
-                    ? Icon(
-                        Icons.favorite,
-                        color: Colors.red,
-                      )
-                    : Icon(
-                        Icons.favorite_border,
-                        color: Colors.red,
-                      )),
-            BottomNavigationBarItem(
-                title: Text(appBartext), icon: Icon(Icons.category)),
-          ],
-        ),
-        body: bottomIndex == 0
-            ? RepaintBoundary(key: previewContainer, child: buildBody())
-            : tabs[bottomIndex]);
+                  isChanged = false;
+                  buildFlusbar(result[0] + " selected");
+                }
+                if (bottomIndex != value) {
+                  bottomIndex = value;
+                  // isChanged = !isChanged;
+                }
+              });
+            },
+            unselectedItemColor: Colors.grey,
+            selectedItemColor: Colors.white,
+            currentIndex: bottomIndex,
+            backgroundColor: Colors.black87,
+            items: [
+              BottomNavigationBarItem(
+                title: Text('Home'),
+                icon: Icon(Icons.home),
+              ),
+              BottomNavigationBarItem(
+                  title: Text('Favorites'),
+                  icon: bottomIndex == 1
+                      ? Icon(
+                          Icons.favorite,
+                          color: Colors.red,
+                        )
+                      : Icon(
+                          Icons.favorite_border,
+                          color: Colors.red,
+                        )),
+              BottomNavigationBarItem(
+                  title: Text(appBartext), icon: Icon(Icons.category)),
+            ],
+          ),
+          body: bottomIndex == 0
+              ? RepaintBoundary(key: previewContainer, child: buildBody())
+              : tabs[bottomIndex]),
+    );
     // body: RepaintBoundary(key: previewContainer, child: buildBody()));
   }
 
@@ -199,6 +186,7 @@ class _MyQuoteViewState extends State<MyQuoteView> {
 
   Widget getJsonData(context, snapshot) {
     var info = json.decode(snapshot.data.toString());
+
     if (snapshot.hasData) {
       return buildPageView(info);
     } else {}
@@ -208,18 +196,14 @@ class _MyQuoteViewState extends State<MyQuoteView> {
   PageView buildPageView(info) => PageView.custom(
         //Mevcut sayfanin indexi
         onPageChanged: (page) {
-          // setState(() {
-          //   // currentPage = page;
-          //   // _quoteText = info[currentPage]["quoteText"];
-          //   // _quoteAuthor = info[currentPage]["quoteAuthor"];
-          // });
+          setState(() {
+            pageIndex = page;
+          });
         },
         controller: PageController(initialPage: pageIndex),
         scrollDirection: Axis.vertical,
         physics: BouncingScrollPhysics(),
         childrenDelegate: SliverChildBuilderDelegate((context, index) {
-          pageIndex = index;
-
           return jsonDataConfig(info, index);
         }, childCount: info.length),
       );
@@ -323,7 +307,7 @@ class _MyQuoteViewState extends State<MyQuoteView> {
   void convertWidgetoImage() async {
     RenderRepaintBoundary renderRepaintBoundary =
         previewContainer.currentContext.findRenderObject();
-    ui.Image boxImage = await renderRepaintBoundary.toImage(pixelRatio: 1);
+    ui.Image boxImage = await renderRepaintBoundary.toImage(pixelRatio: 2);
 
     final directory = (await getExternalStorageDirectory()).path;
 
@@ -336,7 +320,8 @@ class _MyQuoteViewState extends State<MyQuoteView> {
     final RenderBox box = context.findRenderObject();
 
     await Share.shareFiles(['$directory/screenshot.png'],
-        text: "check out my favorite quote",
+        text: "Check out my favorite quote from " +
+            ornek[pageIndex]["quoteAuthor"],
         subject: "QUOTE",
         sharePositionOrigin: box.localToGlobal(Offset.zero) & box.size);
 
