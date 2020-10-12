@@ -145,12 +145,7 @@
 "quoteAuthor":"Jess C. Scott"
 },
 
-{
-"id":28,
-"favStatus": false,
-"quoteText":      "Finish each day and be done with it. You have done what you could. Some blunders and absurdities no doubt crept in; forget them as soon as you can. Tomorrow is a new day. You shall begin it serenely and with too high a spirit to be encumbered with your old nonsense.",    
-"quoteAuthor":"Ralph Waldo Emerson"
-},
+
 {
 "id":29,
 "favStatus": false,
@@ -169,12 +164,7 @@
 "quoteText":      "But better to get hurt by the truth than comforted with a lie.",    
 "quoteAuthor":"Khaled Hosseini"
 },
-{
-"id":32,
-"favStatus": false,
-"quoteText":      "I can never read all the books I want; I can never be all the people I want and live all the lives I want. I can never train myself in all the skills I want. And why do I want? I want to live and feel all the shades, tones and variations of mental and physical experience possible in my life. And I am horribly limited.",    
-"quoteAuthor":"Sylvia Plath"
-},
+
 {
 "id":33,
 "favStatus": false,
@@ -271,12 +261,7 @@
 "quoteText":      "You cannot find peace by avoiding life.",    
 "quoteAuthor":"Michael Cunningham"
 },
-{
-"id":49,
-"favStatus": false,
-"quoteText":      "I wanted a perfect ending. Now I've learned, the hard way, that some poems don't rhyme, and some stories don't have a clear beginning, middle, and end. Life is about not knowing, having to change, taking the moment and making the best of it, without knowing what's going to happen next.Delicious Ambiguity.",    
-"quoteAuthor":"Gilda Radner"
-},
+
 {
 "id":50,
 "favStatus": false,
@@ -296,12 +281,7 @@
 "quoteText":      "Get busy living or get busy dying.",    
 "quoteAuthor":"Stephen King"
 },
-{
-"id":54,
-"favStatus": false,
-"quoteText":      "If the world were merely seductive, that would be easy. If it were merely challenging, that would be no problem. But I arise in the morning torn between a desire to improve the world and a desire to enjoy the world. This makes it hard to plan the day.",    
-"quoteAuthor":"E.B. White"
-},
+
 {
 "id":55,
 "favStatus": false,
@@ -340,12 +320,7 @@
 "quoteText":      "Life is a book and there are a thousand pages I have not yet read.",    
 "quoteAuthor":"Cassandra Clare"
 },
-{
-"id":64,
-"favStatus": false,
-"quoteText":      "When I was 5 years old, my mother always told me that happiness was the key to life. When I went to school, they asked me what I wanted to be when I grew up. I wrote down ‘happy’. They told me I didn’t understand the assignment, and I told them they didn’t understand life.",    
-"quoteAuthor":"John Lennon"
-},
+
 {
 "id":65,
 "favStatus": false,
@@ -376,12 +351,7 @@
 "quoteText":      "Monsters are real, and ghosts are real too. They live inside us, and sometimes, they win.",    
 "quoteAuthor":"Stephen King"
 },
-{
-"id":70,
-"favStatus": false,
-"quoteText":      "Do not let your fire go out, spark by irreplaceable spark in the hopeless swamps of the not-quite, the not-yet, and the not-at-all. Do not let the hero in your soul perish in lonely frustration for the life you deserved and have never been able to reach. The world you desire can be won. It exists.. it is real.. it is possible.. it's yours.",    
-"quoteAuthor":"Ayn Rand"
-},
+
 {
 "id":71,
 "favStatus": false,
@@ -406,18 +376,7 @@
 "quoteText":      "Do not go where the path may lead, go instead where there is no path and leave a trail.",    
 "quoteAuthor":"Ralph Waldo Emerson"
 },
-{
-"id":75,
-"favStatus": false,
-"quoteText":      "People aren't either wicked or noble. They're like chef's salads, with good things and bad things chopped and mixed together in a vinaigrette of confusion and conflict.",    
-"quoteAuthor":"Lemony Snicket"
-},
-{
-"id":76,
-"favStatus": false,
-"quoteText":      "My experience of life is that it is not divided up into genres; it’s a horrifying, romantic, tragic, comical, science-fiction cowboy detective novel. You know, with a bit of pornography if you're lucky.",    
-"quoteAuthor":"Alan Moore"
-},
+
 {
 "id":77,
 "favStatus": false,
@@ -461,12 +420,7 @@
 "quoteText":      "It is said that your life flashes before your eyes just before you die. That is true, it's called Life.",    
 "quoteAuthor":"Terry Pratchett"
 },
-{
-"id":85,
-"favStatus": false,
-"quoteText":      "People are afraid of themselves, of their own reality; their feelings most of all. People talk about how great love is, but that’s bullshit. Love hurts. Feelings are disturbing. People are taught that pain is evil and dangerous. How can they deal with love if they’re afraid to feel? Pain is meant to wake us up. People try to hide their pain. But they’re wrong. Pain is something to carry, like a radio. You feel your strength in the experience of pain. It’s all in how you carry it. That’s what matters. Pain is a feeling. Your feelings are a part of you. Your own reality. If you feel ashamed of them, and hide them, you’re letting society destroy your reality. You should stand up for your right to feel your pain.",    
-"quoteAuthor":"Jim Morrison"
-},
+
 {
 "id":86,
 "favStatus": false,
@@ -485,12 +439,7 @@
 "quoteText":      "It isn't what you have or who you are or where you are or what you are doing that makes you happy or unhappy. It is what you think about it.",    
 "quoteAuthor":"Dale Carnegie"
 },
-{
-"id":89,
-"favStatus": false,
-"quoteText":      "It hurts to let go. Sometimes it seems the harder you try to hold on to something or someone the more it wants to get away. You feel like some kind of criminal for having felt, for having wanted. For having wanted to be wanted. It confuses you, because you think that your feelings were wrong and it makes you feel so small because it's so hard to keep it inside when you let it out and it doesn't coma back. You're left so alone that you can't explain. Damn, there's nothing like that, is there? I've been there and you have too. You're nodding your head.",    
-"quoteAuthor":"Henry Rollins"
-},
+
 {
 "id":90,
 "favStatus": false,
@@ -515,12 +464,7 @@
 "quoteText":      "Instead of worrying about what you cannot control, shift your energy to what you can create.",    
 "quoteAuthor":"Roy T. Bennett"
 },
-{
-"id":94,
-"favStatus": false,
-"quoteText":      "Simplicity, patience, compassion.These three are your greatest treasures.Simple in actions and thoughts, you return to the source of being.Patient with both friends and enemies,you accord with the way things are.Compassionate toward yourself,you reconcile all beings in the world.",    
-"quoteAuthor":"Lao Tzu"
-},
+
 {
 "id":95,
 "favStatus": false,
@@ -539,12 +483,7 @@
 "quoteText":      "Sometimes our light goes out, but is blown again into instant flame by an encounter with another human being.",    
 "quoteAuthor":"Albert Schweitzer"
 },
-{
-"id":98,
-"favStatus": false,
-"quoteText":      "How many slams in an old screen door? Depends how loud you shut it. How many slices in a bread? Depends how thin you cut it. How much good inside a day? Depends how good you live 'em. How much love inside a friend? Depends how much you give 'em.",    
-"quoteAuthor":"Shel Silverstein"
-},
+
 
 {
 "id":100,
@@ -644,12 +583,7 @@
 "quoteText":      "The more I see, the less I know for sure.",    
 "quoteAuthor":"John Lennon"
 },
-{
-"id":118,
-"favStatus": false,
-"quoteText":      "If you want to forget something or someone, never hate it, or never hate him/her. Everything and everyone that you hate is engraved upon your heart; if you want to let go of something, if you want to forget, you cannot hate.",    
-"quoteAuthor":"C. JoyBell C."
-},
+
 {
 "id":119,
 "favStatus": false,
@@ -704,30 +638,7 @@
 "quoteText":      "Do what is right, not what is easy nor what is popular.",    
 "quoteAuthor":"Roy T. Bennett"
 },
-{
-"id":128,
-"favStatus": false,
-"quoteText":      "Live the Life of Your Dreams: Be brave enough to live the life of your dreams according to your vision and purpose instead of the expectations and opinions of others.",    
-"quoteAuthor":"Roy T. Bennett"
-},
-{
-"id":129,
-"favStatus": false,
-"quoteText":      "He who has a why to live for can bear almost any how.",    
-"quoteAuthor":"Friedrich Nietzsche"
-},
-{
-"id":130,
-"favStatus": false,
-"quoteText":      "Don't say you don't have enough time. You have exactly the same number of hours per day that were given to Helen Keller, Pasteur, Michelangelo, Mother Teresa, Leonardo da Vinci, Thomas Jefferson, and Albert Einstein.",    
-"quoteAuthor":"H. Jackson Brown Jr."
-},
-{
-"id":131,
-"favStatus": false,
-"quoteText":      "I am not sure that I exist, actually. I am all the writers that I have read, all the people that I have met, all the women that I have loved; all the cities I have visited.",    
-"quoteAuthor":"Jorge Luis Borges"
-},
+
 {
 "id":132,
 "favStatus": false,

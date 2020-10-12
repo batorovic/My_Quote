@@ -77,12 +77,7 @@
     "quoteText": "The unexamined life is not worth living.",
     "quoteAuthor": "Socrates"
   },
-  {
-    "id": 13,
-    "favStatus": false,
-    "quoteText": "Attitude is a choice. Happiness is a choice. Optimism is a choice. Kindness is a choice. Giving is a choice. Respect is a choice. Whatever choice you make makes you. Choose wisely.",
-    "quoteAuthor": "Roy T. Bennett"
-  },
+
   {
     "id": 14,
     "favStatus": false,
@@ -101,12 +96,7 @@
     "quoteText": "Instead of worrying about what you cannot control, shift your energy to what you can create.",
     "quoteAuthor": "Roy T. Bennett"
   },
-  {
-    "id": 17,
-    "favStatus": false,
-    "quoteText": "It is good to love many things, for therein lies the true strength, and whosoever loves much performs much, and can accomplish much, and what is done in love is well done.",
-    "quoteAuthor": "Vincent Van Gogh"
-  },
+
   {
     "id": 18,
     "favStatus": false,
@@ -227,12 +217,7 @@
     "quoteText": "Life becomes easier and more beautiful when we can see the good in other people.",
     "quoteAuthor": "Roy T. Bennett"
   },
-  {
-    "id": 40,
-    "favStatus": false,
-    "quoteText": "You need to learn how to select your thoughts just the same way you select your clothes every day. This is a power you can cultivate. If you want to control things in your life so bad, work on the mind. That's the only thing you should be trying to control.",
-    "quoteAuthor": "Elizabeth Gilbert"
-  },
+
   {
     "id": 41,
     "favStatus": false,
@@ -323,12 +308,7 @@
     "quoteText": "What you do makes a difference, and you have to decide what kind of difference you want to make.",
     "quoteAuthor": "Jane Goodall"
   },
-  {
-    "id": 56,
-    "favStatus": false,
-    "quoteText": "Even if you cannot change all the people around you, you can change the people you choose to be around. Life is too short to waste your time on people who don’t respect, appreciate, and value you. Spend your life with people who make you smile, laugh, and feel loved.",
-    "quoteAuthor": "Roy T. Bennett"
-  },
+ 
   {
     "id": 57,
     "favStatus": false,
@@ -401,12 +381,7 @@
     "quoteText": "Cry. Forgive. Learn. Move on. Let your tears water the seeds of your future happiness.",
     "quoteAuthor": "Steve Maraboli"
   },
-  {
-    "id": 71,
-    "favStatus": false,
-    "quoteText": "I read once that the ancient Egyptians had fifty words for sand & the Eskimos had a hundred words for snow. I wish I had a thousand words for love, but all that comes to mind is the way you move against me while you sleep & there are no words for that.",
-    "quoteAuthor": "Brian Andreas"
-  },
+  
   {
     "id": 72,
     "favStatus": false,
@@ -501,18 +476,6 @@
     "id": 87,
     "favStatus": false,
     "quoteText": "Believe in your infinite potential. Your only limitations are those you set upon yourself.",
-    "quoteAuthor": "Roy T. Bennett"
-  },
-  {
-    "id": 88,
-    "favStatus": false,
-    "quoteText": "Listen with curiosity. Speak with honesty. Act with integrity. The greatest problem with communication is we don’t listen to understand. We listen to reply. When we listen with curiosity, we don’t listen with the intent to reply. We listen for what’s behind the words.",
-    "quoteAuthor": "Roy T. Bennett"
-  },
-  {
-    "id": 89,
-    "favStatus": false,
-    "quoteText": "Great things happen to those who don't stop believing, trying, learning, and being grateful.",
     "quoteAuthor": "Roy T. Bennett"
   }
 ]

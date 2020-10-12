@@ -1,8 +1,11 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:my_quote/constants.dart';
 import 'package:my_quote/models/json_loader.dart';
 import 'package:my_quote/my_quote_view.dart';
 import 'package:my_quote/size_config.dart';
+import 'package:path_provider/path_provider.dart';
 
 import 'components/flushbar.dart';
 
@@ -60,36 +63,42 @@ class _FavoritesViewState extends State<FavoritesView> {
                     },
                     key: UniqueKey(),
                     direction: DismissDirection.endToStart,
-                    child: Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          gradient: LinearGradient(
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                            colors: [Color(0xffee9617), Color(0xfffe5858)],
-                          )),
-                      padding: EdgeInsets.symmetric(horizontal: 20),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Text(
-                            fav[index]["quoteText"],
-                            textAlign: TextAlign.center,
-                            style: Theme.of(context)
-                                .textTheme
-                                .subtitle1
-                                .copyWith(fontWeight: FontWeight.bold),
-                          ),
-                          Text(
-                            '- ' + fav[index]["quoteAuthor"],
-                            style: Theme.of(context)
-                                .textTheme
-                                .subtitle2
-                                .copyWith(
-                                    fontWeight: FontWeight.normal,
-                                    fontStyle: FontStyle.italic),
-                          ),
-                        ],
+                    child: GestureDetector(
+                      onTap: () async {
+                        print("1");
+                        await goToFavorite(index);
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            gradient: LinearGradient(
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                              colors: [Color(0xffee9617), Color(0xfffe5858)],
+                            )),
+                        padding: EdgeInsets.symmetric(horizontal: 20),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Text(
+                              fav[index]["quoteText"],
+                              textAlign: TextAlign.center,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .subtitle1
+                                  .copyWith(fontWeight: FontWeight.bold),
+                            ),
+                            Text(
+                              '- ' + fav[index]["quoteAuthor"],
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .subtitle2
+                                  .copyWith(
+                                      fontWeight: FontWeight.normal,
+                                      fontStyle: FontStyle.italic),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   );
@@ -102,37 +111,32 @@ class _FavoritesViewState extends State<FavoritesView> {
                       color: Colors.black, fontWeight: FontWeight.bold),
                 ),
               ),
-        // body: SingleChildScrollView(
-        //   child: Column(
-        //     children: [
-        //       // Dismissible(
-        //       //   direction: DismissDirection.endToStart,
-        //       //   key: UniqueKey(),
-        //       //   background: Container(
-        //       //     margin: EdgeInsets.all(4.0),
-        //       //     decoration: BoxDecoration(
-        //       //       borderRadius: BorderRadius.all(Radius.circular(4.0)),
-        //       //       color: Colors.white,
-        //       //     ),
-        //       //     alignment: AlignmentDirectional.centerEnd,
-        //       //     child: Icon(
-        //       //       Icons.delete,
-        //       //       color: Colors.black,
-        //       //     ),
-        //       //   ),
-        //       //   child: Container(
-        //       //     width: 150,
-        //       //     height: 50,
-        //       //     child: Card(
-        //       //       color: Colors.red,
-        //       //     ),
-        //       //   ),
-        //       // ),
-        //     ],
-        //   ),
-        // ),
       ),
     );
+  }
+
+  Future goToFavorite(int index) async {
+    final Directory directory = await getExternalStorageDirectory();
+
+    ornek = await jsonYukle('${directory.path}/' + fav[index]["category"]);
+    for (var i = 0; i < ornek.length; i++) {
+      if (ornek[i]["id"] == fav[index]["id"]) {
+        setState(() {
+          writeJsonName = fav[index]["category"];
+
+          categoryText = fav[index]["category"]
+              .toString()
+              .replaceAll(RegExp('.json'), '')
+              .toUpperCase();
+
+          pageIndex = i;
+        });
+        break;
+      }
+    }
+
+    final BottomNavigationBar navigationBar = globalKey.currentWidget;
+    navigationBar.onTap(0);
   }
 
   void jsonWrite(list, index, jsonName) {

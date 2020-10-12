@@ -7,6 +7,7 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:my_quote/themes_view.dart';
 import 'package:my_quote/constants.dart';
 import 'package:my_quote/favorites_view.dart';
 import 'package:my_quote/models/json_loader.dart';
@@ -19,17 +20,22 @@ import 'package:path_provider/path_provider.dart';
 import 'package:share/share.dart';
 import 'package:my_quote/category_view.dart';
 import 'package:flushbar/flushbar.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'components/flushbar.dart';
 import 'models/json_loader.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MyQuoteView extends StatefulWidget {
-  List data;
-  MyQuoteView({Key key, this.data}) : super(key: key);
+  MyQuoteView({Key key}) : super(key: key);
 
   @override
   _MyQuoteViewState createState() => _MyQuoteViewState();
 }
+
+String backgroundImagePath;
+Color babanizinColoru = cBackGroundColor;
+Color newColor;
 
 GlobalKey globalKey = new GlobalKey(debugLabel: 'btm_app_bar');
 GlobalKey globalKey1 = new GlobalKey(debugLabel: '_future');
@@ -37,21 +43,21 @@ GlobalKey globalKey1 = new GlobalKey(debugLabel: '_future');
 List result = [];
 bool isChanged = false;
 List fav = [];
-List<dynamic> listem = [], scrapper = [], ornek;
+List<dynamic> listem = [], scrapper = [], ornek = [];
 String writeJsonName = "random.json";
 int pageIndex = 0;
 int currentPage = 0;
 Future future1;
+String appBartext = 'RANDOM';
+String categoryText = 'RANDOM';
 
 class _MyQuoteViewState extends State<MyQuoteView> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   static GlobalKey previewContainer = GlobalKey();
 
-  final tabs = [MyQuoteView(), FavoritesView(), CategoryView()];
+  final tabs = [MyQuoteView(), FavoritesView(), CategoryView(), ThemesView()];
 
   int bottomIndex = 0;
-
-  String appBartext = 'RANDOM';
 
   PageController _pageController = new PageController();
 
@@ -79,17 +85,19 @@ class _MyQuoteViewState extends State<MyQuoteView> {
 
   batuhanBaslangic(randomJson, favJson) async {
     ornek = await loadQuotes(randomJson);
+    ornek.shuffle();
     fav = await jsonYukle(favJson);
   }
 
   @override
   void initState() {
     super.initState();
+    // getSelectedBackGround();
+    getBackgroundImage();
     checkPermissions();
     loadAllJsonFile();
     createFavoriteFile();
     future1 = loadJson();
-
     // batuhan(
     //     "/storage/emulated/0/Android/data/com.example.my_quote/files/random.json");
     batuhanBaslangic("assets/random.json",
@@ -99,50 +107,63 @@ class _MyQuoteViewState extends State<MyQuoteView> {
     //     "/storage/emulated/0/Android/data/com.example.my_quote/files/favorites.json");
   }
 
+  getSelectedBackGround() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    int _seen = (prefs.getInt('backgroundColor') ?? cBackGroundColor.value);
+    print(_seen);
+    setState(() {
+      newColor = Color(_seen);
+    });
+
+    // prefs.remove("backgroundColor");
+  }
+
+  Future getBackgroundImage() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      backgroundImagePath = prefs.getString("backgroundImage");
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return SafeArea(
       child: Scaffold(
           key: _scaffoldKey,
-          backgroundColor: cBackGroundColor,
-          // appBar: buildAppBar(),
+          backgroundColor: Colors.transparent,
           bottomNavigationBar: BottomNavigationBar(
+            type: BottomNavigationBarType.fixed, //bar'in rengini koruduk
+            unselectedItemColor: Colors.grey,
+            selectedItemColor: Colors.white,
+            currentIndex: bottomIndex,
+            backgroundColor: Colors.black,
             key: globalKey,
             onTap: (value) {
               setState(() {
                 if (isChanged == true) {
                   appBartext = result[0];
+                  categoryText = appBartext;
+
                   writeJsonName = appBartext.toLowerCase() + ".json";
-                  print(result[1]);
 
-                  // batuhan(result[1]);
-
+                  // print(result[1]);
                   currentPage = 0;
-                  // _pageController.jumpTo(0);
                   pageIndex = 0;
-
                   isChanged = false;
-                  buildFlusbar(result[0] + " selected");
+                  FlusBarBuilder(context: context, msg: result[0] + " selected")
+                      .build(context);
                 }
                 if (bottomIndex != value) {
                   bottomIndex = value;
-                  // isChanged = !isChanged;
                 }
               });
             },
-            unselectedItemColor: Colors.grey,
-            selectedItemColor: Colors.white,
-            currentIndex: bottomIndex,
-            backgroundColor: Colors.black87,
             items: [
-              BottomNavigationBarItem(
-                title: Text('Home'),
-                icon: Icon(Icons.home),
-              ),
-              BottomNavigationBarItem(
-                  title: Text('Favorites'),
-                  icon: bottomIndex == 1
+              buildBottomNavigationBarItem("Home", Icon(Icons.home), null),
+              buildBottomNavigationBarItem(
+                  "Favorites",
+                  bottomIndex == 1
                       ? Icon(
                           Icons.favorite,
                           color: Colors.red,
@@ -150,9 +171,11 @@ class _MyQuoteViewState extends State<MyQuoteView> {
                       : Icon(
                           Icons.favorite_border,
                           color: Colors.red,
-                        )),
-              BottomNavigationBarItem(
-                  title: Text(appBartext), icon: Icon(Icons.category)),
+                        ),
+                  ""),
+              buildBottomNavigationBarItem(
+                  categoryText, Icon(Icons.category), null),
+              buildBottomNavigationBarItem("Themes", Icon(Icons.palette), null)
             ],
           ),
           body: bottomIndex == 0
@@ -162,22 +185,43 @@ class _MyQuoteViewState extends State<MyQuoteView> {
     // body: RepaintBoundary(key: previewContainer, child: buildBody()));
   }
 
-  Text buildText() {
-    return Text(appBartext,
-        style: TextStyle(
-          color: cTextColor,
-        ));
-  }
+  BottomNavigationBarItem buildBottomNavigationBarItem(txt, icon, imgPath) =>
+      BottomNavigationBarItem(title: Text(txt), icon: icon);
 
-  Column buildBody() => Column(children: [buildQuotes()]);
+  // Text buildText() {
+  //   return Text(appBartext,
+  //       style: TextStyle(
+  //         color: cTextColor,
+  //       ));
+  // }
 
-  Expanded buildQuotes() => Expanded(
-        child: Container(
-          color: durum ? cBackGroundColor : Colors.transparent,
-          child: buildFutureBuilder(),
-          // child: futureWidget(),
+  Column buildBody() => Column(children: [
+        Expanded(
+          child: Container(
+              decoration: backgroundImagePath == null
+                  ? BoxDecoration(
+                      color: cBackGroundColor /*cBackGroundColor */,
+                    )
+                  : BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(backgroundImagePath),
+                        fit: BoxFit.cover,
+                        colorFilter: ColorFilter.mode(
+                            Colors.black.withOpacity(0.1), BlendMode.srcOver),
+                      ),
+                    ),
+              child: buildFutureBuilder()),
         ),
-      );
+      ]);
+
+  // FittedBox buildQuotes() => FittedBox(
+  //       fit: BoxFit.fill,
+  //       child: Container(
+  //         // color: durum ? newColor /*cBackGroundColor */ : Colors.transparent,
+  //         child: buildFutureBuilder(),
+  //         // child: futureWidget(),
+  //       ),
+  //     );
 
   FutureBuilder buildFutureBuilder() => FutureBuilder(
         future: future1,
@@ -188,12 +232,12 @@ class _MyQuoteViewState extends State<MyQuoteView> {
     var info = json.decode(snapshot.data.toString());
 
     if (snapshot.hasData) {
-      return buildPageView(info);
+      return buildPageView(ornek.length);
     } else {}
     return Center(child: CircularProgressIndicator());
   }
 
-  PageView buildPageView(info) => PageView.custom(
+  PageView buildPageView(infoLen) => PageView.custom(
         //Mevcut sayfanin indexi
         onPageChanged: (page) {
           setState(() {
@@ -204,12 +248,14 @@ class _MyQuoteViewState extends State<MyQuoteView> {
         scrollDirection: Axis.vertical,
         physics: BouncingScrollPhysics(),
         childrenDelegate: SliverChildBuilderDelegate((context, index) {
-          return jsonDataConfig(info, index);
-        }, childCount: info.length),
+          return Padding(
+              padding: EdgeInsets.symmetric(
+                  horizontal: getProportionateScreenWidth(10)),
+              child: jsonDataConfig(ornek, index));
+        }, childCount: infoLen),
       );
 
-  Container jsonDataConfig(info, int index) => Container(
-        padding: EdgeInsets.all(50),
+  SizedBox jsonDataConfig(info, int index) => SizedBox(
         child: Column(mainAxisAlignment: MainAxisAlignment.center,
             // crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -219,6 +265,36 @@ class _MyQuoteViewState extends State<MyQuoteView> {
               SizedBox(height: getProportionateScreenHeight(30)),
               Visibility(visible: isVisible, child: quoteIcons(info, index))
             ]),
+      );
+
+  Text quoteAuthor(info, int index) => Text(
+        "- " + info[index]["quoteAuthor"],
+        style: Theme.of(context).textTheme.headline6.copyWith(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+      );
+
+  Text quoteText(info, int index) => Text(
+        info[index]["quoteText"],
+        style: GoogleFonts.lato(
+          textStyle: Theme.of(context).textTheme.headline4.copyWith(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontStyle: FontStyle.italic,
+              ),
+        ),
+        // style: Theme.of(context).textTheme.headline4.copyWith(
+        //       color: Colors.white,
+        //       fontWeight: FontWeight.bold,
+        //       fontStyle: FontStyle.italic,
+        //     ),
+        textAlign: TextAlign.center,
+        // style: TextStyle(
+        //     color: cQuoteTextColor,
+        //     fontSize: getProportionateScreenHeight(30),
+        //     fontWeight: FontWeight.bold),
+        // textAlign: TextAlign.center,
       );
 
   Flushbar buildFlusbar(String msg) => Flushbar(
@@ -331,20 +407,6 @@ class _MyQuoteViewState extends State<MyQuoteView> {
     });
     widgetVisiblity();
   }
-
-  Text quoteAuthor(info, int index) => Text(
-        "- " + info[index]["quoteAuthor"],
-        style: TextStyle(color: cTextColor, fontWeight: FontWeight.bold),
-      );
-
-  Text quoteText(info, int index) => Text(
-        info[index]["quoteText"],
-        style: TextStyle(
-            color: cQuoteTextColor,
-            fontSize: getProportionateScreenHeight(30),
-            fontWeight: FontWeight.bold),
-        textAlign: TextAlign.center,
-      );
 
   void widgetVisiblity() {
     setState(() {

@@ -47,12 +47,7 @@
      "quoteText":"Get up, Shahrzad al-Khayzuran. You kneel before no one. Least of all me.",
      "quoteAuthor":"Renee Ahdieh"
   },
-  {
-     "id":12,
-     "favStatus":false,
-     "quoteText":"That’s what it feels like when you touch me. Like millions of tiny universes being born and then dying in the space between your finger and my skin. Sometimes I forget.",
-     "quoteAuthor":"Iain Thomas"
-  },
+
   {
      "id":13,
      "favStatus":false,
@@ -65,12 +60,7 @@
      "quoteText":"You are damaged and broken and unhinged. But so are shooting stars and comets.",
      "quoteAuthor":"Nikita Gill"
   },
-  {
-     "id":15,
-     "favStatus":false,
-     "quoteText":"a flower knows, when its butterfly will return, and if the moon walks out, the sky will understand;but now it hurts, to watch you leave so soon,when I don't know, if you will ever come back.",
-     "quoteAuthor":"Sanober Khan"
-  },
+
   {
      "id":16,
      "favStatus":false,
@@ -83,18 +73,8 @@
      "quoteText":"To fall in love with someone's thoughts - the most intimate, splendid romance.",
      "quoteAuthor":"Sanober Khan"
   },
-  {
-     "id":19,
-     "favStatus":false,
-     "quoteText":"Not only didI love her,but I could tellthe universe lovedher, too.More than others.She was different.After all; I wouldbe a fool not tonotice the way thesunshine played withher hair.",
-     "quoteAuthor":"Christopher Poindexter"
-  },
-  {
-     "id":21,
-     "favStatus":false,
-     "quoteText":"If you cannot hold me in your arms, then hold my memory in high regard.And if I cannot be in your life, then at least let me live in your heart.",
-     "quoteAuthor":"Ranata Suzuki"
-  },
+ 
+ 
   {
      "id":22,
      "favStatus":false,
@@ -275,24 +255,8 @@
      "quoteText":"She was chaos and beauty intertwined. A tornado of roses from divine.",
      "quoteAuthor":"Shakieb Orgunwall"
   },
-  {
-     "id":63,
-     "favStatus":false,
-     "quoteText":"I didn’t love you to seek revenge.I didn’t love you out of loneliness or unhappiness.I didn’t love you for any of the misguided reasons that time might convince you I did.I just loved you because you’re you.",
-     "quoteAuthor":"Ranata Suzuki"
-  },
-  {
-     "id":65,
-     "favStatus":false,
-     "quoteText":"She will blaze through you like a gypsy wildfire. Igniting you soul and dancing in its flames. And when she is gone, the smell of her smoke will be the only thing left to soothe you.",
-     "quoteAuthor":"NicoleLyons"
-  },
-  {
-     "id":66,
-     "favStatus":false,
-     "quoteText":"When you start giving, instead of getting, you make a difference. You can always give a warm smile, a sincere hello, a positive vibe… your attention, your time, your love, and kindness to those around you.",
-     "quoteAuthor":"Roy T. Bennett"
-  },
+
+
   {
      "id":67,
      "favStatus":false,
@@ -371,12 +335,7 @@
      "quoteText":"I remembered you with my soul clenched",
      "quoteAuthor":"Pablo Neruda"
   },
-  {
-     "id":85,
-     "favStatus":false,
-     "quoteText":"I love to walk. Walking is a spiritual journey and a reflection of living. Each of us must determine which path to take and how far to walk; we must find our own way, what is right for one may not be for another. There is no single right way to deal with late stage cancer, to live life or approach death, or to walk an old mission trail.",
-     "quoteAuthor":"Edie Littlefield Sundby"
-  },
+
   {
      "id":86,
      "favStatus":false,
@@ -388,11 +347,6 @@
      "favStatus":false,
      "quoteText":"Dancing, at its best, is independence and intimacy in balance.",
      "quoteAuthor":"Donna Goddard"
-  },
-  {
-     "id":88,
-     "favStatus":false,
-     "quoteText":"When he looks at me, the way he looks at me... He does not know, what I lack... Or - how - I am incomplete. He sees me, for what I - am, as I am. He's happy - to see me. Every time. Every day.",
-     "quoteAuthor":"Guillermo del Toro"
   }
+
 ]

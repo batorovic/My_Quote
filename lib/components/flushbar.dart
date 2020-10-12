@@ -16,8 +16,9 @@ class FlusBarBuilder extends StatelessWidget {
         message: msg,
         flushbarPosition: FlushbarPosition.TOP,
         margin: EdgeInsets.all(8),
-        leftBarIndicatorColor: Colors.blue[300],
+        leftBarIndicatorColor: Colors.yellow,
         borderRadius: 8,
+        backgroundColor: Colors.black,
         // flushbarStyle: FlushbarStyle.FLOATING,
         duration: Duration(seconds: 1),
       )..show(context);

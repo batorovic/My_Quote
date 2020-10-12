@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_quote/models/route_generator.dart';
 import 'package:my_quote/my_quote_view.dart';
 
 import 'package:flutter/foundation.dart';
@@ -22,8 +21,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Material App',
       home: MyQuoteView(),
-      initialRoute: '/',
-      onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
 }
