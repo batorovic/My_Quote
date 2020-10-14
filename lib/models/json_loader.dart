@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:my_quote/my_quote_view.dart';
 
@@ -160,5 +161,13 @@ createFavoriteFile() async {
   List x = [];
   if (!file.existsSync()) {
     file.writeAsStringSync(json.encode(x));
+  }
+}
+
+void checkPermissions() async {
+  var status = await Permission.storage.status;
+  if (!status.isGranted) {
+    PermissionStatus permissionStatus = await Permission.storage.request();
+    print("permission status ${permissionStatus.isGranted}");
   }
 }

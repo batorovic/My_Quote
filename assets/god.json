@@ -1,89 +1,368 @@
 [
- 
   {
-    "id": 5,
-    "favStatus": false,
-    "quoteText": "I think God, in creating man, somewhat overestimated his ability.",
-    "quoteAuthor": "Oscar Wilde"
+     "id":0,
+     "favStatus":false,
+     "quoteText":"If we find ourselves with a desire that nothing in this world can satisfy, the most probable explanation is that we were made for another world.",
+     "quoteAuthor":"C.S. Lewis"
   },
   {
-    "id": 6,
-    "favStatus": false,
-    "quoteText": "To be a Christian means to forgive the inexcusable because God has forgiven the inexcusable in you.",
-    "quoteAuthor": "C.S. Lewis"
+     "id":1,
+     "favStatus":false,
+     "quoteText":"All God does is watch us and kill us when we get boring. We must never, ever be boring.",
+     "quoteAuthor":"Chuck Palahniuk"
   },
   {
-    "id": 7,
-    "favStatus": false,
-    "quoteText": "And now these three remain: faith, hope and love. But the greatest of these is love.",
-    "quoteAuthor": "Anonymous"
+     "id":2,
+     "favStatus":false,
+     "quoteText":"The Christian does not think God will love us because we are good, but that God will make us good because He loves us.",
+     "quoteAuthor":"C.S. Lewis"
   },
   {
-    "id": 8,
-    "favStatus": false,
-    "quoteText": "God has no religion.",
-    "quoteAuthor": "Mahatma Gandhi"
+     "id":4,
+     "favStatus":false,
+     "quoteText":"Prayer is not asking. It is a longing of the soul. It is daily admission of one's weakness. It is better in prayer to have a heart without words than words without a heart.",
+     "quoteAuthor":"Mahatma Gandhi"
   },
   {
-    "id": 9,
-    "favStatus": false,
-    "quoteText": "We are not necessarily doubting that God will do the best for us; we are wondering how painful the best will turn out to be.",
-    "quoteAuthor": "C.S. Lewis"
+     "id":5,
+     "favStatus":false,
+     "quoteText":"I think God, in creating man, somewhat overestimated his ability.",
+     "quoteAuthor":"Oscar Wilde"
   },
   {
-    "id": 10,
-    "favStatus": false,
-    "quoteText": "God will not look you over for medals, degrees or diplomas but for scars.",
-    "quoteAuthor": "Elbert Hubbard"
+     "id":6,
+     "favStatus":false,
+     "quoteText":"To be a Christian means to forgive the inexcusable because God has forgiven the inexcusable in you.",
+     "quoteAuthor":"C.S. Lewis"
   },
   {
-    "id": 11,
-    "favStatus": false,
-    "quoteText": "The most wasted of all days is one without laughter.",
-    "quoteAuthor": "Nicolas Chamfort"
+     "id":7,
+     "favStatus":false,
+     "quoteText":"And now these three remain: faith, hope and love. But the greatest of these is love.",
+     "quoteAuthor":"Anonymous"
   },
   {
-    "id": 12,
-    "favStatus": false,
-    "quoteText": "A man can no more diminish God's glory by refusing to worship Him than a lunatic can put out the sun by scribbling the word 'darkness' on the walls of his cell.",
-    "quoteAuthor": "C.S. Lewis"
+     "id":8,
+     "favStatus":false,
+     "quoteText":"God has no religion.",
+     "quoteAuthor":"Mahatma Gandhi"
   },
   {
-    "id": 13,
-    "favStatus": false,
-    "quoteText": "If I should ever die, God forbid, let this be my epitaph:THE ONLY PROOF HE NEEDEDFOR THE EXISTENCE OF GODWAS MUSIC",
-    "quoteAuthor": "kurt vonnegut"
+     "id":9,
+     "favStatus":false,
+     "quoteText":"We are not necessarily doubting that God will do the best for us; we are wondering how painful the best will turn out to be.",
+     "quoteAuthor":"C.S. Lewis"
   },
   {
-    "id": 14,
-    "favStatus": false,
-    "quoteText": "The darker the night, the brighter the stars,  The deeper the grief, the closer is God!",
-    "quoteAuthor": "Fyodor Dostoevsky"
+     "id":10,
+     "favStatus":false,
+     "quoteText":"God will not look you over for medals, degrees or diplomas but for scars.",
+     "quoteAuthor":"Elbert Hubbard"
   },
   {
-    "id": 15,
-    "favStatus": false,
-    "quoteText": "Never be afraid to trust an unknown future to a known God.",
-    "quoteAuthor": "Corrie ten Boom"
+     "id":11,
+     "favStatus":false,
+     "quoteText":"The most wasted of all days is one without laughter.",
+     "quoteAuthor":"Nicolas Chamfort"
   },
   {
-    "id": 16,
-    "favStatus": false,
-    "quoteText": "The function of prayer is not to influence God, but rather to change the nature of the one who prays.",
-    "quoteAuthor": "Soren Kierkegaard"
-  },
-
-  {
-    "id": 18,
-    "favStatus": false,
-    "quoteText": "Pain insists upon being attended to. God whispers to us in our pleasures, speaks in our consciences, but shouts in our pains. It is his megaphone to rouse a deaf world.",
-    "quoteAuthor": "C.S. Lewis"
+     "id":12,
+     "favStatus":false,
+     "quoteText":"A man can no more diminish God's glory by refusing to worship Him than a lunatic can put out the sun by scribbling the word 'darkness' on the walls of his cell.",
+     "quoteAuthor":"C.S. Lewis"
   },
   {
-    "id": 19,
-    "favStatus": false,
-    "quoteText": "If you want to know what God thinks of money, just look at the people he gave it to.",
-    "quoteAuthor": "Dorothy Parker"
+     "id":13,
+     "favStatus":false,
+     "quoteText":"If I should ever die, God forbid, let this be my epitaph:THE ONLY PROOF HE NEEDEDFOR THE EXISTENCE OF GODWAS MUSIC",
+     "quoteAuthor":"kurt vonnegut"
+  },
+  {
+     "id":14,
+     "favStatus":false,
+     "quoteText":"The darker the night, the brighter the stars,  The deeper the grief, the closer is God!",
+     "quoteAuthor":"Fyodor Dostoevsky"
+  },
+  {
+     "id":15,
+     "favStatus":false,
+     "quoteText":"Never be afraid to trust an unknown future to a known God.",
+     "quoteAuthor":"Corrie ten Boom"
+  },
+  {
+     "id":16,
+     "favStatus":false,
+     "quoteText":"The function of prayer is not to influence God, but rather to change the nature of the one who prays.",
+     "quoteAuthor":"Soren Kierkegaard"
+  },
+  {
+     "id":18,
+     "favStatus":false,
+     "quoteText":"Pain insists upon being attended to. God whispers to us in our pleasures, speaks in our consciences, but shouts in our pains. It is his megaphone to rouse a deaf world.",
+     "quoteAuthor":"C.S. Lewis"
+  },
+  {
+     "id":19,
+     "favStatus":false,
+     "quoteText":"If you want to know what God thinks of money, just look at the people he gave it to.",
+     "quoteAuthor":"Dorothy Parker"
+  },
+  {
+     "id":24,
+     "favStatus":false,
+     "quoteText":"He died not for men, but for each man. If each man had been the only man made, He would have done no less.",
+     "quoteAuthor":"C.S. Lewis"
+  },
+  {
+     "id":28,
+     "favStatus":false,
+     "quoteText":"Parents are like God because you wanna know they're out there, and you want them to think well of you, but you really only call when you need something.",
+     "quoteAuthor":"Chuck Palahniuk"
+  },
+  {
+     "id":29,
+     "favStatus":false,
+     "quoteText":"I talk to God but the sky is empty.",
+     "quoteAuthor":"Sylvia Plath"
+  },
+  {
+     "id":30,
+     "favStatus":false,
+     "quoteText":"God save us from people who mean well.",
+     "quoteAuthor":"Vikram Seth"
+  },
+  {
+     "id":31,
+     "favStatus":false,
+     "quoteText":"That wasn't any act of God. That was an act of pure human fuckery.",
+     "quoteAuthor":"Stephen King"
+  },
+  {
+     "id":32,
+     "favStatus":false,
+     "quoteText":"Sometimes God allows what he hates to accomplish what he loves.",
+     "quoteAuthor":"Joni Eareckson Tada"
+  },
+  {
+     "id":33,
+     "favStatus":false,
+     "quoteText":"Thou hast made us for thyself, O Lord, and our heart is restless until it finds its rest in thee.",
+     "quoteAuthor":"Augustine of Hippo"
+  },
+  {
+     "id":35,
+     "favStatus":false,
+     "quoteText":"No woman wants to be in submission to a man who isn't in submission to God!",
+     "quoteAuthor":"T D Jakes"
+  },
+  {
+     "id":37,
+     "favStatus":false,
+     "quoteText":"You can safely assume you've created God in your own image when it turns out that God hates all the same people you do.",
+     "quoteAuthor":"Anne Lamott"
+  },
+  {
+     "id":38,
+     "favStatus":false,
+     "quoteText":"When I stand before God at the end of my life, I would hope that I would not have a single bit of talent left, and could say, 'I used everything you gave me.",
+     "quoteAuthor":"Erma Bombeck"
+  },
+  {
+     "id":39,
+     "favStatus":false,
+     "quoteText":"There are people in the world so hungry, that God cannot appear to them except in the form of bread.",
+     "quoteAuthor":"Mahatma Gandhi"
+  },
+  {
+     "id":40,
+     "favStatus":false,
+     "quoteText":"I think it pisses God off if you walk by the color purple in a field somewhere and don't notice it.",
+     "quoteAuthor":"alice walker"
+  },
+  {
+     "id":41,
+     "favStatus":false,
+     "quoteText":"He - and if there is a God, I am convinced he is a he, because no woman could or would ever fuck things up this badly.",
+     "quoteAuthor":"George Carlin"
+  },
+  {
+     "id":42,
+     "favStatus":false,
+     "quoteText":"I don't stand for black man's side, I don't stand for white man's side, I stand for God's side.",
+     "quoteAuthor":"Bob Marley"
+  },
+  {
+     "id":44,
+     "favStatus":false,
+     "quoteText":"If you want to make God laugh, tell him about your plans.",
+     "quoteAuthor":"Woody Allen"
+  },
+  {
+     "id":45,
+     "favStatus":false,
+     "quoteText":"Above all else, guard your heart for it affects everything else you do.",
+     "quoteAuthor":"Anonymous"
+  },
+  {
+     "id":46,
+     "favStatus":false,
+     "quoteText":"God is silent. Now if only man would shut up.",
+     "quoteAuthor":"Woody Allen"
+  },
+  {
+     "id":50,
+     "favStatus":false,
+     "quoteText":"Look for God, suggests my Guru. Look for God like a man with his head on fire looks for water.",
+     "quoteAuthor":"Elizabeth Gilbert"
+  },
+  {
+     "id":52,
+     "favStatus":false,
+     "quoteText":"And out of that hopeless attempt has come nearly all that we call human history—money, poverty, ambition, war, prostitution, classes, empires, slavery—the long terrible story of man trying to find something other than God which will make him happy.",
+     "quoteAuthor":"C.S. Lewis"
+  },
+  {
+     "id":53,
+     "favStatus":false,
+     "quoteText":"I do not believe in God and I am not an atheist.",
+     "quoteAuthor":"Albert Camus"
+  },
+  {
+     "id":54,
+     "favStatus":false,
+     "quoteText":"God is a comedian playing to an audience that is too afraid to laugh.",
+     "quoteAuthor":"Voltaire"
+  },
+  {
+     "id":57,
+     "favStatus":false,
+     "quoteText":"All that you touchYou Change.All that you ChangeChanges you.The only lasting truthis Change.Godis Change.",
+     "quoteAuthor":"Octavia E. Butler"
+  },
+  {
+     "id":58,
+     "favStatus":false,
+     "quoteText":"Joy is the infallible sign of the presence of God.",
+     "quoteAuthor":"Pierre Teilhard de Chardin"
+  },
+  {
+     "id":60,
+     "favStatus":false,
+     "quoteText":"It is when we notice the dirt that God is most present in us; it is the very sign of His presence.",
+     "quoteAuthor":"C.S. Lewis"
+  },
+  {
+     "id":62,
+     "favStatus":false,
+     "quoteText":"Let us never forget to pray. God lives. He is near. He is real. He is not only aware of us but cares for us. He is our Father. He is accessible to all who will seek Him.",
+     "quoteAuthor":"Gordon B. Hinckley"
+  },
+  {
+     "id":64,
+     "favStatus":false,
+     "quoteText":"Listen to God with a broken heart. He is not only the doctor who mends it, but also the father who wipes away the tears.",
+     "quoteAuthor":"Criss Jami"
+  },
+  {
+     "id":65,
+     "favStatus":false,
+     "quoteText":"When one person suffers from a delusion, it is called insanity. When many people suffer from a delusion it is called a Religion.",
+     "quoteAuthor":"Robert M. Pirsig"
+  },
+  {
+     "id":66,
+     "favStatus":false,
+     "quoteText":"If there were such a thing as terminal literalism, you'd have died in childhood.",
+     "quoteAuthor":"Cassandra Clare"
+  },
+  {
+     "id":67,
+     "favStatus":false,
+     "quoteText":"God answers all prayers, but sometimes his answer is 'no'.",
+     "quoteAuthor":"Dan Brown"
+  },
+  {
+     "id":68,
+     "favStatus":false,
+     "quoteText":"And if there were a God, I think it very unlikely that He would have such an uneasy vanity as to be offended by those who doubt His existence",
+     "quoteAuthor":"Bertrand Russell"
+  },
+  {
+     "id":70,
+     "favStatus":false,
+     "quoteText":"What you are is God's gift to you, what you become is your gift to God.",
+     "quoteAuthor":"Hans Urs von Balthasar"
+  },
+  {
+     "id":71,
+     "favStatus":false,
+     "quoteText":"I do not feel obliged to believe that the same God who has endowed us with sense, reason, and intellect has intended us to forgo their use.",
+     "quoteAuthor":"Galileo Galilei"
+  },
+  {
+     "id":72,
+     "favStatus":false,
+     "quoteText":"No man can be called friendless who has God and the companionship of good books.",
+     "quoteAuthor":"Elizabeth Barrett Browning"
+  },
+  {
+     "id":74,
+     "favStatus":false,
+     "quoteText":"God's Final Message to His Creation:'We apologize for the inconvenience.",
+     "quoteAuthor":"Douglas Adams"
+  },
+  {
+     "id":78,
+     "favStatus":false,
+     "quoteText":"God is a circle whose center is everywhere and circumference nowhere.",
+     "quoteAuthor":"Voltaire"
+  },
+  {
+     "id":79,
+     "favStatus":false,
+     "quoteText":"What comes into our minds when we think about God is the most important thing about us.",
+     "quoteAuthor":"A.W. Tozer"
+  },
+  {
+     "id":80,
+     "favStatus":false,
+     "quoteText":"Independence is my happiness, and I view things as they are, without regard to place or person; my country is the world, and my religion is to do good.",
+     "quoteAuthor":"thomas paine"
+  },
+  {
+     "id":82,
+     "favStatus":false,
+     "quoteText":"With or without religion, good people can behave well and bad people can do evil; but for good people to do evil - that takes religion.",
+     "quoteAuthor":"Steven Weinberg"
+  },
+  {
+     "id":83,
+     "favStatus":false,
+     "quoteText":"We may ignore, but we can nowhere evade the presence of God. The world is crowded with Him. He walks everywhere incognito.",
+     "quoteAuthor":"C.S. Lewis"
+  },
+  {
+     "id":84,
+     "favStatus":false,
+     "quoteText":"Greed is your god, Kaz.\"He almost laughed at that.\" No, Inej. Greed bows to me. It is my servant and my lever.",
+     "quoteAuthor":"Leigh Bardugo"
+  },
+  {
+     "id":86,
+     "favStatus":false,
+     "quoteText":"The eye through which I see God is the same eye through which God sees me; my eye and God's eye are one eye, one seeing, one knowing, one love.",
+     "quoteAuthor":"Meister Eckhart"
+  },
+  {
+     "id":87,
+     "favStatus":false,
+     "quoteText":"There is but one good; that is God. Everything else is good when it looks to Him and bad when it turns from Him.",
+     "quoteAuthor":"C.S. Lewis"
+  },
+  {
+     "id":89,
+     "favStatus":false,
+     "quoteText":"The irony is that while God doesn’t need us but still wants us, we desperately need God but don’t really want Him most of the time.",
+     "quoteAuthor":"Francis Chan"
   }
- 
 ]

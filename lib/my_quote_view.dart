@@ -15,7 +15,6 @@ import 'package:my_quote/size_config.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/services.dart';
 // import 'package:screenshot/screenshot.dart';
-import 'package:permission_handler/permission_handler.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share/share.dart';
 import 'package:my_quote/category_view.dart';
@@ -43,7 +42,7 @@ GlobalKey globalKey1 = new GlobalKey(debugLabel: '_future');
 List result = [];
 bool isChanged = false;
 List fav = [];
-List<dynamic> listem = [], scrapper = [], ornek = [];
+List<dynamic> ornek = [];
 String writeJsonName = "random.json";
 int pageIndex = 0;
 int currentPage = 0;
@@ -67,8 +66,6 @@ class _MyQuoteViewState extends State<MyQuoteView> {
   bool quoteFav = false;
   bool pageRoute = false;
   File _imageFile;
-
-  // ScreenshotController screenshotController = ScreenshotController();
 
   // Future _future;
   Future<String> loadJson() async => await rootBundle.loadString(
@@ -428,13 +425,5 @@ class _MyQuoteViewState extends State<MyQuoteView> {
         },
       ),
     ));
-  }
-}
-
-void checkPermissions() async {
-  var status = await Permission.storage.status;
-  if (!status.isGranted) {
-    PermissionStatus permissionStatus = await Permission.storage.request();
-    print("permission status ${permissionStatus.isGranted}");
   }
 }
