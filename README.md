@@ -1,6 +1,6 @@
 # My Quote
 
-A new Flutter project.
+My first mobile app project is about famous people quotes with different categories.
 
 ## Getting Started
 
