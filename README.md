@@ -6,11 +6,7 @@ My first mobile app project is about famous people quotes with different categor
 
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Demo Project
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+![ezgif-3-0aca58a8a086](https://user-images.githubusercontent.com/33568252/101950467-66f90c00-3c06-11eb-9982-4c29e24cd9da.gif)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
